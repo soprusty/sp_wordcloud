@@ -9,7 +9,6 @@ import streamlit as st
 #Caching the model for faster loading
 @st.cache
 
-##user_input = st.text_area("label goes here", default_value_goes_here)
 
 # Define the prediction function
 def predict(carat, cut, color, clarity, depth, table, x, y, z,etext):
@@ -20,7 +19,7 @@ def predict(carat, cut, color, clarity, depth, table, x, y, z,etext):
  #   return prediction
 
 
-st.title('Customer Transaction Predictor')
+#st.title('Customer Transaction Predictor')
 ##st.image("""https://www.india.com/wp-content/uploads/2014/08/666.jpg""")
 st.header('Enter the characteristics of the Customer:')
 etext = st.text_area("Enter Something here! ")
@@ -35,7 +34,6 @@ plt.imshow(wordcloud)
 plt.axis("off")
 plt.tight_layout(pad = 0)
 plt.show()
-
 
 st.write(etext)
 carat = st.number_input('Carat Weight:', min_value=0.1, max_value=10.0, value=1.0)
