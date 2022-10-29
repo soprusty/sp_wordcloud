@@ -7,8 +7,8 @@ from textblob import TextBlob
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 'wordcloud'])
 
-subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-'textblob'])
+##subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+##'textblob'])
 
 import streamlit as st
 from wordcloud import WordCloud,STOPWORDS
