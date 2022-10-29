@@ -21,7 +21,7 @@ def predict(carat, cut, color, clarity, depth, table, x, y, z,etext):
 
 #st.title('Customer Transaction Predictor')
 ##st.image("""https://www.india.com/wp-content/uploads/2014/08/666.jpg""")
-st.header('Enter the characteristics of the Customer:')
+#st.header('Enter the characteristics of the Customer:')
 etext = st.text_area("Enter Something here! ")
 
 wordcloud = WordCloud(width = 800, height = 800,
