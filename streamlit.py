@@ -63,8 +63,9 @@ def predict(carat, cut, color, clarity, depth, table, x, y, z):
 
 
 st.title('Customer Transaction Predictor')
-st.image("""https://www.india.com/wp-content/uploads/2014/08/666.jpg""")
+##st.image("""https://www.india.com/wp-content/uploads/2014/08/666.jpg""")
 st.header('Enter the characteristics of the Customer:')
+etext = st.text_area("put ur text", aaaa)
 carat = st.number_input('Carat Weight:', min_value=0.1, max_value=10.0, value=1.0)
 cut = st.selectbox('Cut Rating:', ['Fair', 'Good', 'Very Good', 'Premium', 'Ideal'])
 color = st.selectbox('Color Rating:', ['J', 'I', 'H', 'G', 'F', 'E', 'D'])
