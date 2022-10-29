@@ -12,7 +12,7 @@ import streamlit as st
 ##user_input = st.text_area("label goes here", default_value_goes_here)
 
 # Define the prediction function
-def predict(carat, cut, color, clarity, depth, table, x, y, z):
+def predict(carat, cut, color, clarity, depth, table, x, y, z,etext):
     #Predicting the price of the carat
     if cut == 'Fair':
         cut = 0
