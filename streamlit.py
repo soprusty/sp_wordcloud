@@ -17,7 +17,7 @@ text=st.text_input('enter text')
 if text:
   w=WordCloud(background_color='white').generate(text)
   plt.axis("off")
-  plt.imshow(w)
+  plt.imshow(w,interpolation='bilinear')
   #plt.imshow(wordcloud, interpolation='bilinear')
   plt.show()
   st.pyplot()
