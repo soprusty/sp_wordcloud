@@ -18,6 +18,6 @@ if text:
   w=WordCloud().generate(text)
   plt.axis("off")
   plt.imshow(w)
-  plt.imshow(wordcloud, interpolation='bilinear')
+  #plt.imshow(wordcloud, interpolation='bilinear')
   plt.show()
   st.pyplot()
