@@ -2,6 +2,7 @@ import sys
 import subprocess
 from textblob import TextBlob
 
+!pip3 install textblob
 # implement pip as a subprocess:
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 'wordcloud'])
