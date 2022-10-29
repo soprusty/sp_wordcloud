@@ -9,7 +9,7 @@ import streamlit as st
 #Caching the model for faster loading
 @st.cache
 
-user_input = st.text_area("label goes here", default_value_goes_here)
+##user_input = st.text_area("label goes here", default_value_goes_here)
 
 # Define the prediction function
 def predict(carat, cut, color, clarity, depth, table, x, y, z):
