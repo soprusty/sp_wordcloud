@@ -1,5 +1,7 @@
 import streamlit as st
-from wordcloud import WordCloud
+#from wordcloud import WordCloud
+import streamlit_wordcloud as wordcloud
+
 import matplotlib.pyplot as plt
 
 # Create some sample text
