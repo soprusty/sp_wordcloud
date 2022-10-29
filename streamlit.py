@@ -14,48 +14,6 @@ import streamlit as st
 # Define the prediction function
 def predict(carat, cut, color, clarity, depth, table, x, y, z,etext):
     #Predicting the price of the carat
-    if cut == 'Fair':
-        cut = 0
-    elif cut == 'Good':
-        cut = 1
-    elif cut == 'Very Good':
-        cut = 2
-    elif cut == 'Premium':
-        cut = 3
-    elif cut == 'Ideal':
-        cut = 4
-
-    if color == 'J':
-        color = 0
-    elif color == 'I':
-        color = 1
-    elif color == 'H':
-        color = 2
-    elif color == 'G':
-        color = 3
-    elif color == 'F':
-        color = 4
-    elif color == 'E':
-        color = 5
-    elif color == 'D':
-        color = 6
-    
-    if clarity == 'I1':
-        clarity = 0
-    elif clarity == 'SI2':
-        clarity = 1
-    elif clarity == 'SI1':
-        clarity = 2
-    elif clarity == 'VS2':
-        clarity = 3
-    elif clarity == 'VS1':
-        clarity = 4
-    elif clarity == 'VVS2':
-        clarity = 5
-    elif clarity == 'VVS1':
-        clarity = 6
-    elif clarity == 'IF':
-        clarity = 7
     
 
  #   prediction = model.predict(pd.DataFrame([[carat, cut, color, clarity, depth, table, x, y, z]], columns=['carat', 'cut', 'color', 'clarity', 'depth', 'table', 'x', 'y', 'z']))
@@ -66,6 +24,19 @@ st.title('Customer Transaction Predictor')
 ##st.image("""https://www.india.com/wp-content/uploads/2014/08/666.jpg""")
 st.header('Enter the characteristics of the Customer:')
 etext = st.text_area("Enter Something here! ")
+
+wordcloud = WordCloud(width = 800, height = 800,
+                background_color ='white',
+                stopwords = stopwords,
+                min_font_size = 10).generate(etext)
+
+plt.figure(figsize = (8, 8), facecolor = None)
+plt.imshow(wordcloud)
+plt.axis("off")
+plt.tight_layout(pad = 0)
+plt.show()
+
+
 st.write(etext)
 carat = st.number_input('Carat Weight:', min_value=0.1, max_value=10.0, value=1.0)
 cut = st.selectbox('Cut Rating:', ['Fair', 'Good', 'Very Good', 'Premium', 'Ideal'])
