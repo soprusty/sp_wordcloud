@@ -1,3 +1,4 @@
+pip install streamlit-wordcloud
 import streamlit as st
 #from wordcloud import WordCloud
 import streamlit_wordcloud as wordcloud
