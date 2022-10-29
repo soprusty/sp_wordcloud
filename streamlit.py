@@ -8,34 +8,16 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 import streamlit as st
 from wordcloud import WordCloud
 import matplotlib.pyplot as plt
+st.set_option('deprecation.showPyplotGlobalUse', False)
+
 
 st.subheader('wordcloud app')
 text=st.text_input('enter text')
 
 if text:
   w=WordCloud().generate(text)
+  plt.axis("off")
   plt.imshow(w)
+  plt.imshow(wordcloud, interpolation='bilinear')
+  plt.show()
   st.pyplot()
-
-
-
-
-
-#pip install streamlit-wordcloud
-#pip install streamlit_wordcloud
-#
-#import streamlit_wordcloud as wordcloud
-
-
-
-# Create some sample text
-#text = 'Fun, fun, awesome, awesome, tubular, astounding, superb, great, amazing, amazing, amazing, amazing'
-
-# Create and generate a word cloud image:
-#wordcloud = WordCloud().generate(text)
-
-# Display the generated image:
-#plt.imshow(wordcloud, interpolation='bilinear')
-#plt.axis("off")
-#plt.show()
-#st.pyplot()
