@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.subheader('wordcloud app')
-text=st.text_input('enter text')
+text=st.text_area('enter text')
 SampleTextInBlobFormat = TextBlob(text)
 NounPhrases=SampleTextInBlobFormat.noun_phrases
 
