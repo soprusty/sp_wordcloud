@@ -15,7 +15,7 @@ cmd = ['python','-m','textblob.download_corpora']
 subprocess.run(cmd)
 
  #   python -m textblob.download_corpora
-subprocess.run([f"{sys.executable}", "script.py"])
+#subprocess.run([f"{sys.executable}", "script.py"])
 
 
 #python -m textblob.download_corpora
@@ -33,10 +33,10 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 st.subheader('wordcloud app')
 text=st.text_input('enter text')
 SampleTextInBlobFormat = TextBlob(text)
-NounPhrases=SampleTextInBlobFormat.noun_phrases
+#NounPhrases=SampleTextInBlobFormat.noun_phrases
 
 NewNounList=[]
-for words in NounPhrases:
+for words in SampleTextInBlobFormat:
     NewNounList.append(words.replace(" ", "_"))
 
 NewNounString=' '.join(NewNounList)    
