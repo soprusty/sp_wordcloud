@@ -7,8 +7,8 @@ import subprocess
 subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 'textblob'])
 
-##subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
-##'textblob'])
+subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
+'wordcloud'])
 
 import subprocess
 cmd = ['python','-m','textblob.download_corpora']
