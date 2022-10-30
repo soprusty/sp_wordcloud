@@ -10,9 +10,13 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 ##subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 ##'textblob'])
 
-#import subprocess
-cmd = ['python3','-m','textblob.download_corpora']
+import subprocess
+cmd = ['python','-m','textblob.download_corpora']
 subprocess.run(cmd)
+
+ #   python -m textblob.download_corpora
+
+
 
 #python -m textblob.download_corpora
 #pip3 install -U textblob
