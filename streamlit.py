@@ -18,12 +18,6 @@ import nltk
 nltk.download('brown')
 nltk.download('punkt')
 
- #   python -m textblob.download_corpora
-#subprocess.run([f"{sys.executable}", "script.py"])
-
-#python -m textblob.download_corpora
-#pip3 install -U textblob
-
 #python3 -m textblob.download_corpora
 from textblob import TextBlob
 
@@ -31,7 +25,6 @@ import streamlit as st
 from wordcloud import WordCloud,STOPWORDS
 import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
-
 
 st.subheader('wordcloud app')
 text=st.text_input('enter text')
@@ -45,11 +38,11 @@ for words in NounPhrases:
 NewNounString=' '.join(NewNounList)    
 
 if text:
-  w=WordCloud(max_words=50,
-              font_step=2,
-              max_font_size=500,
-              width=1000,
-              height=720,
+  w=WordCloud(#max_words=50,
+              #font_step=2,
+              #max_font_size=500,
+              #width=1000,
+              #height=720,
               background_color='white',
               stopwords = STOPWORDS).generate(NewNounString)
   plt.axis("off")
