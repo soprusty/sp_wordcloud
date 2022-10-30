@@ -38,11 +38,11 @@ for words in NounPhrases:
 NewNounString=' '.join(NewNounList)    
 
 if text:
-  w=WordCloud(#max_words=50,
-              #font_step=2,
-              #max_font_size=500,
-              #width=1000,
-              #height=720,
+  w=WordCloud(max_words=50,
+              font_step=2,
+              max_font_size=500,
+              width=1000,
+              height=720,
               background_color='white',
               stopwords = STOPWORDS).generate(NewNounString)
   plt.axis("off")
