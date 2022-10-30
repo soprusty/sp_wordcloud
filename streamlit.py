@@ -15,7 +15,7 @@ cmd = ['python','-m','textblob.download_corpora']
 subprocess.run(cmd)
 
  #   python -m textblob.download_corpora
-
+subprocess.run([f"{sys.executable}", "script.py"])
 
 
 #python -m textblob.download_corpora
