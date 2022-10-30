@@ -10,10 +10,14 @@ subprocess.check_call([sys.executable, '-m', 'pip', 'install',
 ##subprocess.check_call([sys.executable, '-m', 'pip', 'install', 
 ##'textblob'])
 
-#python -m textblob.download_corpora
-pip3 install -U textblob
+#import subprocess
+cmd = ['python3','-m','textblob.download_corpora']
+subprocess.run(cmd)
 
-python3 -m textblob.download_corpora
+#python -m textblob.download_corpora
+#pip3 install -U textblob
+
+#python3 -m textblob.download_corpora
 from textblob import TextBlob
 
 import streamlit as st
