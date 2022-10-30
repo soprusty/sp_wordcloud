@@ -26,8 +26,8 @@ from wordcloud import WordCloud,STOPWORDS
 import matplotlib.pyplot as plt
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.subheader('wordcloud app')
-text=st.text_area('enter text')
+st.subheader('Build Summary')
+text=st.text_area('Please Enter the text here')
 SampleTextInBlobFormat = TextBlob(text)
 NounPhrases=SampleTextInBlobFormat.noun_phrases
 
