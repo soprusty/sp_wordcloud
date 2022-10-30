@@ -14,6 +14,10 @@ import subprocess
 cmd = ['python','-m','textblob.download_corpora']
 subprocess.run(cmd)
 
+import nltk
+nltk.download('brown')
+nltk.download('punkt')
+
  #   python -m textblob.download_corpora
 #subprocess.run([f"{sys.executable}", "script.py"])
 
