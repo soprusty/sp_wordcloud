@@ -37,8 +37,9 @@ for words in NounPhrases:
 
 NewNounString=' '.join(NewNounList)    
 
-if text:
-  w=WordCloud(max_words=50,
+#if text:
+if st.button('Predict Customer Transaction'):
+    w=WordCloud(max_words=50,
               font_step=2,
               max_font_size=500,
               width=1000,
